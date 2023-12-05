@@ -1,0 +1,235 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body > section{
+  position: absolute;
+  top: 2%;
+  width: 100%;
+}
+.bg-color{
+  background-repeat: no-repeat;
+  background: rgb(43,37,137);
+  background: linear-gradient(90deg, rgba(43,37,137,1) 0%, rgba(67,67,170,1) 52%, rgba(87,150,230,1) 100%);
+}
+.content-center{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  margin-top: 50px !important;
+  text-align: center;
+}
+.content-left{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  text-align: left;
+  margin-top: 50px !important;
+}
+.transparent-container{
+  color: beige;
+}
+.box{
+  max-width: 350px;
+  margin: auto;
+  padding: 15px;
+  background-color: #e3ddff;
+  border-radius: 10px;
+}
+
+.election-form-box{
+  max-width: 75%;
+  margin: auto;
+  padding: 15px;
+  background-color: #e3ddff;
+  border-radius: 10px;
+}
+.position-box{
+  max-width: 350px;
+  max-width: 350px;
+  margin: auto;
+  padding: 15px;
+  background-color: #e3ddff;
+  border-radius: 10px;
+}
+.position-box .title{
+  font-size: 20pt;
+  color: black !important;
+  text-align: center;
+  margin: 50px;
+  width: 250px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-image {
+  background-image: url("../img/hero-1.JPG");
+  height: -webkit-fill-available; 
+  background-size: -webkit-fill-available;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-image {
+  background-image: url("../img/hero-1.JPG");
+  height: -webkit-fill-available; 
+  background-size: -webkit-fill-available;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-image::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: -webkit-fill-available;
+  background-attachment: fixed;
+  backdrop-filter: blur(10px); 
+  pointer-events: none;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+li{
+  color:white;
+  padding:10px;
+  background-color: hsl(204, 68%, 44%);
+}
+ li :hover{
+  background-color: hwb(204 12% 51%);
+}
+a{
+  display: inline-block;
+  text-align: start;
+  border: none;
+  text-decoration: none;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type=text],
+input[type=number],
+input[type=file],
+input[type=date],
+input[type=password],
+textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus,
+input[type=file]:focus,
+input[type=number]:focus,
+input[type=date]:focus,
+input[type=password]:focus,
+textarea{
+  border: 3px solid #d7b8e7;
+}
+
+.home-btns{
+  position: absolute;
+  top: 2%;
+  margin-left: 50%;
+  width: 48%;
+  float: right;
+  text-align: right;
+}
+
+.nav{
+  margin: 50px 50px 0 0;
+  width: 350px;
+  position: absolute;
+}
+
+h1{
+  color: antiquewhite;
+}
+.header{
+  text-align: right;
+}
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.btn1{
+  background-color: hwb(198 12% 29%) !important;
+}
+.btn2{
+  background-color: rgb(9, 113, 225) !important;
+}
+.btn3{
+  background-color: hwb(289 4% 30%) !important;
+}
+.green-button {
+  color: white;
+  background-color: green;
+}
+
+.btn1:hover{
+  background-color: hwb(198 14% 46%);
+}
+.btn2:hover{
+  background-color: hwb(211 0% 29%);
+}
+.btn3:hover{
+  background-color: hwb(289 7% 41%);
+}
+.hero-title{
+  position: absolute;
+  top: 40%; 
+  font-size: 20pt;
+  color: black !important;
+  transform: translate(0%, -50%); 
+  text-align: center;
+  margin: 15px;
+}
+
+.hero-title > h1 > span{
+  color: rgb(200, 0, 255);
+}
+
+.hero-title-dashboard{
+  text-align: center;
+  margin: 150px 0px 0px 100px;
+  font-size: 14pt;
+}
+
+.m-10{
+  margin: 10px;
+}

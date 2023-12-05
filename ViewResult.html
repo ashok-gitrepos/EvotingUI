@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voting Results</title>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Voting Results</h1>
+  <div class="results">
+    <h2>President</h2>
+    <ul>
+      <li>Candidate 1: <span class="vote-count">100</span> votes</li>
+      <li>Candidate 2: <span class="vote-count">75</span> votes</li>
+      <li>Candidate 3: <span class="vote-count">50</span> votes</li>
+    </ul>
+  </div>
+  <div class="results">
+    <h2>Vice President</h2>
+    <ul>
+      <li>Candidate A: <span class="vote-count">90</span> votes</li>
+      <li>Candidate B: <span class="vote-count">80</span> votes</li>
+      <li>Candidate C: <span class="vote-count">60</span> votes</li>
+    </ul>
+  </div>
+  <div class="results">
+    <h2>Sports Organizer</h2>
+    <ul>
+      <li>Candidate X: <span class="vote-count">120</span> votes</li>
+      <li>Candidate Y: <span class="vote-count">70</span> votes</li>
+      <li>Candidate Z: <span class="vote-count">40</span> votes</li>
+    </ul>
+  </div>
+  <div class="results">
+    <h2>Culture Organizer</h2>
+    <ul>
+      <li>Candidate P: <span class="vote-count">110</span> votes</li>
+      <li>Candidate Q: <span class="vote-count">85</span> votes</li>
+      <li>Candidate R: <span class="vote-count">55</span> votes</li>
+    </ul>
+  </div>
+
+  <button onclick="goBack()">Go Back</button>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Page</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="bg-image"></div>
+  <div class="home-btns">
+    <a href="admin/login.html" class="btn btn1">Admin</a>
+    <a href="login.html" button class="btn btn2">Login</a>
+    <a href="register.html" class="btn btn3">Register</a>
+</div>
+<div class="content-center" style="margin-top:70px;">  
+  <div class="box">
+      <h2>Create an Account</h2>
+      <form action="register.php" method="post">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="studentid">Student ID:</label>
+        <input type="text" id="studentid" name="studentid" required>
+
+        <label for="phonenumber">Phone Number:</label>
+        <input type="text" id="phonenumber" name="phonenumber" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmpassword">Confirm Password:</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" required>
+
+        <input type="submit" class="btn btn1" value="Register">
+        <br>
+        Already have an account?<a class="m-10" href="login.html">Login here!</a><br>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

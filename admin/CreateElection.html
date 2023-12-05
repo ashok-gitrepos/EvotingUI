@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title >Create Election</title>
+  <link rel="stylesheet" type="text/css" href="../css/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+  <div class="bg-image"></div>
+  <div class="home-btns">
+    <a class="btn btn1" href="CreateElection.html"> Create an Election</a>
+    <a class="btn btn2" href="election_schedule.php"> Election schedule </a>
+    <a class="btn btn3" href="login.html"> Logout </a>
+  </div>
+<form action="create_election.php" method="post">
+  <div class="content-center" style="margin-top:70px">
+  <h1>Create Election</h1>
+  <div class="election-form-box">
+    <div class="form-group" style="display: flex;">
+      <div style="width: 30%;margin-left: 20px;">
+        <label for="electionTitle">Election Title:</label>
+        <input type="text" id="electionTitle" name="electionTitle" placeholder="enter election title" required>
+      </div>
+      <div style="width: 30%; margin-left: 20px;">
+        <label for="electionDate">Election Date:</label>
+        <input type="date" id="electionDate" name="electionDate" required>
+      </div>
+      <div style="width: 30%; margin-left: 20px;">
+        <label for="electionDate">Result Date:</label>
+        <input type="date" id="resultDate" name="resultDate" required>
+      </div>
+    </div>
+    <h2 class="mt-5"> Add Cadidates <i class="btn btn-success fa-solid fa-circle-plus add-row"></i></h2> 
+
+    <div class="row d-flex">
+      <div class="col-sm-3">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName0" name="firstName0" placeholder="enter first name" required>
+      </div>
+      <div class="col-sm-3">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName0" name="lastName0" placeholder="enter last name" required>
+      </div>
+      <div class="col-sm-5">
+        <label for="information">Information:</label>
+        <input type="text" id="information0" name="information0" placeholder="descripton" required>
+      </div>
+    </div>
+    <div id="new_candidate_div" style="display:block"></div>
+    <input type="submit"  class="btn btn2 m-10" value="Create Election">
+    <br>
+    <button class="btn btn3" onclick="goBack()">Go Back</button>
+    <a class="btn btn1" href="login.html"> Logout </a>
+    <br><br>
+    
+  </div>
+  <input type="hidden" name="incr" id="incr" value="0" readonly/>
+</div>
+</form>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+    $(document).ready(function(){
+      var incr = $('#incr').val();
+      $('.add-row').click(function(e) {  
+        incr = parseInt(incr) + 1;
+        $('#incr').val(incr);
+        $("#new_candidate_div").append('<div class="row d-flex div-row'+incr+'"><div class="col-sm-3"> <label for="firstName'+incr+'">First Name:</label><input type="text" id="firstName'+incr+'" name="firstName'+incr+'" placeholder="enter firstname" required></div><div class="col-sm-3"><label for="lastName'+incr+'">Last Name:</label><input type="text" id="lastName'+incr+'" name="lastName'+incr+'" placeholder="enter lastname" required></div><div class="col-sm-5"><label for="information'+incr+'">Information:</label><input type="text" id="information'+incr+'" name="information'+incr+'" placeholder="descripton" required></div><div class="col-sm-1" style="display:block" onClick="remove_row('+incr+')"><i class="btn btn-danger fa-solid fa-circle-minus mt-5"></i></div></div>');
+      });
+    });
+
+    function remove_row(id){
+      $('.div-row'+id).remove();
+    }
+   
+  </script>
+</body>
+</html>

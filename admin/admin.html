@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title >Create Election</title>
+  <link rel="stylesheet" type="text/css" href="../css/app.css">
+</head>
+<body>
+  <h1>Create Election</h1>
+  <form>
+    <div class="form-group">
+      <label for="electionTitle">Election Title:</label>
+      <input type="text" id="electionTitle" name="electionTitle" required>
+    </div>
+    <div class="form-group">
+      <label for="candidateName">Candidate Name:</label>
+      <input type="text" id="candidateName" name="candidateName" required>
+    </div>
+           <div class="form-group">
+      <label for="candidateImage">Candidate Image:</label>
+      <input type="file" id="candidateImage" name="candidateImage" accept="image/*" required>
+             
+             </div>
+            
+    <div class="form-group">
+      <label for="electionDate">Election Date:</label>
+      <input type="date" id="electionDate" name="electionDate" required>
+    </div>
+    <button type="submit">Create Election</button>
+  </form>
+
+  <script src="script.js"></script>
+
+
+
+  <button onclick="goBack()">Go Back</button>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
